@@ -86,12 +86,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/3._Software_Stack_Management/d._Python_Anaconda_and_Mamba/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/3._Software_Stack_Management/d._Software_List/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/3._Software_Stack_Management/e._Self-Managed_Software_and_Applications/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/3._Software_Stack_Management/e._Python_Anaconda_and_Mamba/</loc>
+         <lastmod>2024-06-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/3._Software_Stack_Management/f._Self-Managed_Software_and_Applications/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>

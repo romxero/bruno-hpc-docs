@@ -1,0 +1,1388 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CZBioHub HPC User Guide">
+      
+      
+        <meta name="author" content="@griznog">
+      
+      
+        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/b._Storage_Namespaces/">
+      
+      
+        <link rel="prev" href="../../3._Software_Stack_Management/e._Self-Managed_Software_and_Applications/">
+      
+      
+        <link rel="next" href="../../5._Site_and_Cluster_Infrastructure/a._Overview_of_HPC_Sites_and_Reseources/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>Introduction - CZBioHub HPC User Quide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CZBioHub HPC User Quide" class="md-header__button md-logo" aria-label="CZBioHub HPC User Quide" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CZBioHub HPC User Quide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CZBioHub HPC User Quide" class="md-nav__button md-logo" aria-label="CZBioHub HPC User Quide" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    CZBioHub HPC User Quide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1._Getting_Started/a._Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the HPC Cluster Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1._Getting_Started/b._Connecting_with_SSH/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting with SSH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1._Getting_Started/c._Connecting_with_OnDemand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting with Open OnDemand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1._Getting_Started/d._Data_Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data and Storage Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Working with Slurm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Working with Slurm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/a._Introduction_to_Slurm_and_Resource_Scheduling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a Job Scheduler?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/b._How_Job_Submission_Works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Job Submission Works
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/c._Using_Interactive_Jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/d._Using_Simple_Batch_Jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/e._Using_Batch_Array_Jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/f._Using_Job_Dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Dependencies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/g._Advanced_Job_Scripting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Job Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/h._Managing_Slurm_Jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/i._Using_the_Slurm_Rest_API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slurm REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Software Stack Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Software Stack Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3._Software_Stack_Management/a._Software_Stack_Overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3._Software_Stack_Management/b._Operating_System_Packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operating System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3._Software_Stack_Management/c._Lmod_Modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lmod modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3._Software_Stack_Management/d._Python_Anaconda_and_Mamba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Conda Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3._Software_Stack_Management/e._Self-Managed_Software_and_Applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-managed software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4. Storage and Data Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            4. Storage and Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    5. Site and Cluster Infrastructure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            5. Site and Cluster Infrastructure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5._Site_and_Cluster_Infrastructure/a._Overview_of_HPC_Sites_and_Reseources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sites Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5._Site_and_Cluster_Infrastructure/b._Site_BiohubSF.Computational_Infrastructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bruno Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    6. Recipes for Common Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            6. Recipes for Common Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6._Recipes_for_Common_Tasks/a._Recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7.Frequently Asked Questions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            7.Frequently Asked Questions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.Frequently_Asked_Questions/FAQ_Adding_a_new_question_to_the_FAQ_section/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.Frequently_Asked_Questions/FAQ_How_do_I_use_NoMachine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.Frequently_Asked_Questions/FAQ_This_thing_used_to_work_but_is_broken_now/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.Frequently_Asked_Questions/FAQ_Why_is_my_HOME_quota_so_small/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.Frequently_Asked_Questions/FAQ_Why_no_sudo_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    A. Contact Us
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            A. Contact Us
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../A._Contact_Us/a._Contact_Us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introduction">Introduction</h1>
+<div class="admonition warning">
+<p class="admonition-title">Draft Draft Draft</p>
+<p>This is a draft of the storage description, layout and recommended usage.
+Comments/suggestions/critiques to us in Slack #hpc-community.</p>
+</div>
+<h1 id="storage-namespaces">Storage Namespaces</h1>
+<p>The following table outlines the available storage namespaces in which storage is either already available or can be provisioned upon request.</p>
+<p>+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| Unix Path                  | Disk/Server<br> | Snapshots | On-Site<br> | Off-Site<br>  | AWS Glacier<br> | Best used for/data which is: |
+|                            | Redundancy      |           | Replica     | Replica       | Deep Archive    |                              |
++============================+=================+===========+=============+===============+=================+==============================+
+| <code>${HOME}</code>                  | High            | Yes       | Yes         | No            | No              |  - private data/applications |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/mydata/${USER}</code>      | High            | Yes       | Yes         | No            | No              |  - personal working space    |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/local/scratch</code><br>       | Low             | No        | No          | No            | No              |  - scratch data              |
+| <code>/hpc/nodes/${NODE}</code>       |                 |           |             |               |                 |  - easily reproducible data  |
+|                            |                 |           |             |               |                 |  - intermediate job files    |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/scratch/${NAME}</code>     | Low/Medium      | No        | No          | No            | No              |  - scratch data              |
+|                            |                 |           |             |               |                 |  - easily reproducible data  |
+|                            |                 |           |             |               |                 |  - intermediate job files    |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/projects/${NAME}</code>    | High            | Yes <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - working/active data sets  |
+|                            |                 |           |             |               |                 |  - results                   |
+|                            |                 |           |             |               |                 |  - difficult to reproduce    |
+|                            |                 |           |             |               |                 |    data                      |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/archives/${NAME}</code>    | High            | Yes <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - completed projects        |
+|                            |                 |           |             |               |                 |  - data with retention       |
+|                            |                 |           |             |               |                 |    requirements              |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/user_apps/${GROUP}</code>  | High            | Yes <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Yes <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>      | No              |  - shared application        |
+|                            |                 |           |             |               |                 |    installations             |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/reference/${NAME}</code>   | High            | Yes <sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Optional    | Optional      | No              |  - easy to re-download       |
+|                            |                 |           |             |               |                 |  - easy to reproduce         |
+|                            |                 |           |             |               |                 |  - write-once, read-many     |
+|                            |                 |           |             |               |                 |  - storage optimized for     |
+|                            |                 |           |             |               |                 |    reads                     |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/instruments/${NAME}</code> | High            | Yes <sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - raw or preprocessed       |
+|                            |                 |           |             |               |                 |    instrument data           |
+|                            |                 |           |             |               |                 |  - directory per-instrument  |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
+| <code>/hpc/websites/${VHOST}</code>   | Variable        | Optional  | Optional    | Optional      | Optional        |  - static web content        |
+|                            |                 |           |             |               |                 |  - requires a vhost          |
+|                            |                 |           |             |               |                 |    name for website          |
++----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+</p>
+<h1 id="namespace-details">Namespace Details</h1>
+<h2 id="home"><code>${HOME}</code></h2>
+<p>The user <code>${HOME}</code> directory, also known as <code>~</code> and on Scientific Computing
+systems, always located at <code>/home/${USER}</code>, is for private user data. The
+system uses this location to store sensitive data, website caches/cookies,
+Kerberos ticket data, credentials, etc., and because of this should always have
+permissions of <code>0700</code> and ownership of <code>${USER}:${USER}.grp</code>. This location
+should NEVER be shared with another account or user on the system. If there is a
+need for multiple people to share an account, please request a shared service
+account that is not a real person.</p>
+<h2 id="hpcmydatauser"><code>/hpc/mydata/${USER}</code></h2>
+<p>This location is provided to give each user 1 TB of personal working space
+where they can relax permissions to share data or work on small collaborations
+without needed to request storage spaces. It's intended to provide a space to
+try things out and once a project has matured, to then request project, archive
+or other explicit space for the project.</p>
+<h2 id="localscratch-hpcnodesnode"><code>/local/scratch</code>, <code>/hpc/nodes/${NODE}</code></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This space is subject to being purged at each node reboot.</p>
+</div>
+<p>Each node has some amount of local working storage. This can always be accessed
+via <code>/tmp</code> which is a per-user namespace only available when on the node.
+<code>/local/scratch</code> is available for use where a project might want to stage data
+which remains on the node across multiple jobs. <code>/local/scratch</code> on each node
+is then NFS exported to all other nodes and can be found at
+<code>/hpc/nodes/${NODENAME}</code>. Please consult with us before using this space as
+local storage is not treated as a consumable by Slurm and filling a node's
+local disks can negatively impact other jobs.</p>
+<h2 id="hpcscratchname"><code>/hpc/scratch/${NAME}</code></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>NEVER LEAVE THE ONLY COPY OF IMPORTANT DATA ON A SCRATCH SPACE.</p>
+</div>
+<p>Shared scratch storage areas are available via this namespace. The locations
+will be tuned for maximum performance and the cost of reliability. Scratch
+spaces are subject to being lost as a result of very few disk failures or being
+purged and rebuilt on relatively short notice to address performance or space
+issues.</p>
+<h2 id="hpcprojectsname"><code>/hpc/projects/${NAME}</code></h2>
+<p>Project spaces are intended to be good working spaces with high reliability.
+Snapshots, where possible, provide a history to help recover from mistaken
+deletes or changes, but as noted above the amount of retained history is
+subject to the usage pattern of the project. The level of replication/backup
+and long term archiving can be adjusted as needed for a given projects
+requirements.</p>
+<h2 id="hpcarchivesname"><code>/hpc/archives/${NAME}</code></h2>
+<p>Archive spaces are intended to be write-once and then never or extremely rarely
+updated, until they reach a pre-determined end-of-life and are removed. The
+underlying on-prem/site storage will be optimized for reliability and read
+performance and this is a good location to park data which needs to be made
+available via the web or <a href="https://globus.org">Globus</a> on a long term basis.</p>
+<h2 id="hpcuser_appsgroup"><code>/hpc/user_apps/${GROUP}</code></h2>
+<p>This location provides an optimized location for installing shared
+applications. It is organized by groups, with each PI/lab group having a
+location where they can install applications, with permissions to share those
+as widely as need. Optionally a <code>module</code> can be added so that applications here
+can be managed with <code>module load appname/version</code> after doing <code>module load
+${GROUP}</code>.</p>
+<h2 id="hpcreferencename"><code>/hpc/reference/${NAME}</code></h2>
+<p>The reference location is provided as a place to store on-site copies of public
+or other reference data to avoid re-downloading the same datasets repeatedly.
+Many NCBI datasets fall into this category, where it makes sense to manage one
+copy everyone can access and use. Only things easy to reproduce or re-download
+should be kept here. This space is optimized for reading to support being used
+in scale-out workflows that need to access reference data.</p>
+<h2 id="hpcinstrumentsname"><code>/hpc/instruments/${NAME}</code></h2>
+<p>Storing data from instruments presents some special problems. It's common to
+have an instrument controlled by a Windows PC which cannot be updated due to
+vendor/support restrictions and is at increased risk for malware or ransomware.
+To limit the impact of an infected instrument PC, each instrument can have a
+separate service account such that a given instrument can only reach/modify its
+own data. Additionally, by having this space accept data but be treated as
+read-only to all other systems, it's possible to maintain a long snapshot
+history to enable recovering from a potential ransomware infection with minimal
+data loss. </p>
+<h2 id="hpcwebsitesvhost"><code>/hpc/websites/${VHOST}</code></h2>
+<p>It's often convenient to be able to produce static website content from the HPC
+environment and make it available via a public website. The most basic use of
+this location is to create a hostname, say <code>myproject.czbiohub.org</code>, then any
+data written to <code>/hpc/websites/myproject.czbiohub.org</code> will be available via
+<a href="https://myproject.czbiohub.org">https://myproject.czbiohub.org</a>. Additional
+features, like authentication and access control can be made available upon
+request.</p>
+<h1 id="example-use-cases">Example Use Cases</h1>
+<h2 id="analysis-pipeline">Analysis Pipeline</h2>
+<p>Suppose we have a pipeline, managed by a workflow tool like <code>nextflow</code>. The
+incoming raw data for this pipeline is generated from one or more lab
+instruments. The pipeline processing will produce</p>
+<ul>
+<li>intermediate/scratch files</li>
+<li>quality control results to be web-accessible</li>
+<li>processed data made available for researcher secondary analysis via local filesystem and globus</li>
+</ul>
+<p>The steps in our hypothetical data flow might be:</p>
+<ol>
+<li>Data moves from instrument(s) to <code>/hpc/instruments/${INSTRUMENT_NAME}(s)</code>. Can be push or pull.</li>
+<li>Pipeline copies data to <code>/hpc/scratch/${NAME}</code> as a working location.</li>
+<li>HPC Cluster jobs perform analysis:<ul>
+<li>Reference data read from <code>/hpc/reference/${DBNAME}</code></li>
+<li>Running jobs use <code>/tmp</code> and/or <code>/local/scratch</code> and/or <code>/hpc/scratch/${NAME}</code> for intermediate and temporary files.</li>
+<li>Results written to <code>/hpc/projects/${NAME}</code></li>
+</ul>
+</li>
+<li>QC output formatted and written to <code>/hpc/websites/${NAME}.czbiohub.org</code></li>
+<li>Data to be retained long-term copied to <code>/hpc/archives/%{NAME}</code></li>
+</ol>
+<p>This example uses shared and local scratch, instrument storage, projects
+storage, website storage and archive storage. As all these are also available
+(or can be) via <a href="https://globus.org">Globus</a>, any of these spaces can be
+optionally used for data delivery to or sharing with collaborators.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Off-site replicas available on a per-project basis, subject to constraints
+on space and available inter-site bandwidth.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Snapshot polices will vary based on space constraints and the underlying
+storage snapshot features. Dynamic workflow patterns, with frequent
+writes/re-writes/deletes, typically requires reducing snapshot lifespan.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Long-term archiving a copy of data to Deep Archive is available upon request.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><code>/hpc/user_apps</code> may be replicated read-only and require a specific host or
+hosts for writes.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>

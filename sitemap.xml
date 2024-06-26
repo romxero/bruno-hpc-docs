@@ -121,27 +121,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/FAQ_Adding_a_new_question_to_the_FAQ_section/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/a._FAQ_How_do_I_use_NoMachine/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/FAQ_How_do_I_use_NoMachine/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/b._FAQ_Adding_a_new_question_to_the_FAQ_section/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/FAQ_This_thing_used_to_work_but_is_broken_now/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/c._FAQ_This_thing_used_to_work_but_is_broken_now/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/FAQ_Why_is_my_HOME_quota_so_small/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/d._FAQ_Why_is_my_HOME_quota_so_small/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/FAQ_Why_no_sudo_access/</loc>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/e._FAQ_Why_no_sudo_access/</loc>
          <lastmod>2024-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>

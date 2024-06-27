@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/6._Recipes_for_Common_Tasks/b._using_pigz/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hpc.czbiohub.org/hpc-user-guide/7.Frequently_Asked_Questions/a._FAQ_How_do_I_use_NoMachine/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>

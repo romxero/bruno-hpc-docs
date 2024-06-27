@@ -12,13 +12,13 @@
         <meta name="author" content="@griznog,@rc">
       
       
-        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/1._Getting_Started/d._Data_Management/">
+        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/6._Recipes_for_Common_Tasks/b._using_pigz/">
       
       
-        <link rel="prev" href="../c._Connecting_with_OnDemand/">
+        <link rel="prev" href="../a._Recipes/">
       
       
-        <link rel="next" href="../../2._Working_with_Slurm/a._Introduction_to_Slurm_and_Resource_Scheduling/">
+        <link rel="next" href="../../7.Frequently_Asked_Questions/a._FAQ_How_do_I_use_NoMachine/">
       
       
       <link rel="icon" href="../../images/favicon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Data and Storage Management - CZBioHub HPC User Quide</title>
+        <title>Tutorial: Using pigz Command on an HPC System - CZBioHub HPC User Quide</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-and-storage-management" class="md-skip">
+        <a href="#tutorial-using-pigz-command-on-an-hpc-system" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data and Storage Management
+              Tutorial: Using pigz Command on an HPC System
             
           </span>
         </div>
@@ -185,19 +185,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -211,7 +209,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             1. Getting Started
@@ -225,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../a._Overview/" class="md-nav__link">
+      <a href="../../1._Getting_Started/a._Overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -246,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../b._Connecting_with_SSH/" class="md-nav__link">
+      <a href="../../1._Getting_Started/b._Connecting_with_SSH/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,7 +265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../c._Connecting_with_OnDemand/" class="md-nav__link">
+      <a href="../../1._Getting_Started/c._Connecting_with_OnDemand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -285,19 +283,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../1._Getting_Started/d._Data_Management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -306,7 +295,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -890,17 +878,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -914,7 +904,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             6. Recipes for Common Tasks
@@ -928,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6._Recipes_for_Common_Tasks/a._Recipes/" class="md-nav__link">
+      <a href="../a._Recipes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,10 +936,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../6._Recipes_for_Common_Tasks/b._using_pigz/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial: Using pigz Command on an HPC System
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -958,6 +968,182 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-pigz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use pigz?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compressing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompressing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompressing Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressing-multiple-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Multiple Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressing-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompressing-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompressing Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-compression-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting Compression Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-multiple-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Multiple Processors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-the-original-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping the Original File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbose Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-compressed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Compressed Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Errors and Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1200,6 +1386,170 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-pigz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use pigz?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compressing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompressing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompressing Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressing-multiple-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Multiple Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressing-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressing Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decompressing-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decompressing Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-compression-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjusting Compression Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-multiple-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Multiple Processors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-the-original-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping the Original File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verbose Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-compressed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Compressed Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-errors-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Errors and Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1213,8 +1563,84 @@
                   
 
 
-<h1 id="data-and-storage-management">Data and Storage Management</h1>
-<p>Please see the <a href="/3._Storage">Storage</a> section of this guide for data management help and best practices.</p>
+<h1 id="tutorial-using-pigz-command-on-an-hpc-system">Tutorial: Using <code>pigz</code> Command on an HPC System</h1>
+<p><code>pigz</code> (Parallel Implementation of GZip) is a powerful tool for compressing and decompressing files. It leverages multiple processors and cores to speed up the process, making it especially useful on High-Performance Computing (HPC) systems. This tutorial will guide you through the basics of using <code>pigz</code>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Access to an HPC system with <code>pigz</code> installed.</li>
+<li>Basic knowledge of command-line operations.</li>
+</ul>
+<h2 id="why-use-pigz">Why Use <code>pigz</code>?</h2>
+<ul>
+<li><strong>Speed:</strong> <code>pigz</code> utilizes multiple CPU cores, making it significantly faster than <code>gzip</code> for large files.</li>
+<li><strong>Compatibility:</strong> Compressed files are fully compatible with <code>gzip</code>, meaning you can decompress them using <code>gzip</code> or <code>gunzip</code>.</li>
+</ul>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="compressing-files">Compressing Files</h3>
+<p>To compress a file using <code>pigz</code>, simply use the following command:</p>
+<pre><code class="language-sh">pigz filename
+</code></pre>
+<p>This will create a compressed file named <code>filename.gz</code>.</p>
+<h3 id="decompressing-files">Decompressing Files</h3>
+<p>To decompress a file, use:</p>
+<pre><code class="language-sh">pigz -d filename.gz
+</code></pre>
+<p>This will recreate the original file <code>filename</code>.</p>
+<p>Alternatively, you can use <code>unpigz</code>, which is a symbolic link to <code>pigz -d</code>:</p>
+<pre><code class="language-sh">unpigz filename.gz
+</code></pre>
+<h3 id="compressing-multiple-files">Compressing Multiple Files</h3>
+<p>You can compress multiple files at once by listing them after the <code>pigz</code> command:</p>
+<pre><code class="language-sh">pigz file1 file2 file3
+</code></pre>
+<p>This will create <code>file1.gz</code>, <code>file2.gz</code>, and <code>file3.gz</code>.</p>
+<h3 id="compressing-directories">Compressing Directories</h3>
+<p>To compress all files within a directory, you can use the following command in combination with <code>tar</code>:</p>
+<pre><code class="language-sh">tar cf - directory | pigz &gt; directory.tar.gz
+</code></pre>
+<p>This will create a compressed archive <code>directory.tar.gz</code>.</p>
+<h3 id="decompressing-directories">Decompressing Directories</h3>
+<p>To decompress a <code>.tar.gz</code> archive, use:</p>
+<pre><code class="language-sh">pigz -d directory.tar.gz
+tar xf directory.tar
+</code></pre>
+<p>Or, you can combine the commands:</p>
+<pre><code class="language-sh">tar xzf directory.tar.gz
+</code></pre>
+<h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="adjusting-compression-level">Adjusting Compression Level</h3>
+<p><code>pigz</code> allows you to adjust the compression level (from 1 to 9). Level 1 is the fastest and least compressed, while level 9 is the slowest and most compressed. The default is level 6.</p>
+<pre><code class="language-sh">pigz -1 filename  # Fastest compression
+pigz -9 filename  # Maximum compression
+</code></pre>
+<h3 id="using-multiple-processors">Using Multiple Processors</h3>
+<p>By default, <code>pigz</code> uses all available processors. You can limit the number of processors used with the <code>-p</code> option:</p>
+<pre><code class="language-sh">pigz -p 4 filename  # Use 4 processors
+</code></pre>
+<h3 id="keeping-the-original-file">Keeping the Original File</h3>
+<p>To keep the original file after compression, use the <code>-k</code> option:</p>
+<pre><code class="language-sh">pigz -k filename
+</code></pre>
+<p>This will keep <code>filename</code> and create <code>filename.gz</code>.</p>
+<h3 id="verbose-output">Verbose Output</h3>
+<p>For more detailed output during compression, use the <code>-v</code> option:</p>
+<pre><code class="language-sh">pigz -v filename
+</code></pre>
+<h3 id="testing-compressed-files">Testing Compressed Files</h3>
+<p>To test the integrity of compressed files without decompressing them, use the <code>-t</code> option:</p>
+<pre><code class="language-sh">pigz -t filename.gz
+</code></pre>
+<h2 id="common-errors-and-troubleshooting">Common Errors and Troubleshooting</h2>
+<ul>
+<li><strong>Command Not Found:</strong> Ensure <code>pigz</code> is installed on your system. If not, contact your HPC administrator or install it using your package manager.</li>
+<li><strong>Permission Denied:</strong> Ensure you have the necessary permissions to read/write the files you are compressing/decompressing.</li>
+<li><strong>Insufficient Memory:</strong> Compressing very large files can be memory-intensive. If you encounter memory issues, try compressing smaller chunks or using fewer processors.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p><code>pigz</code> is a versatile and powerful tool for handling file compression on HPC systems. By leveraging parallel processing, it offers significant performance improvements over traditional compression tools. With this tutorial, you should be well-equipped to start using <code>pigz</code> effectively in your HPC environment.</p>
+<p>For more details and advanced options, refer to the <a href="https://zlib.net/pigz/">pigz manual</a>.</p>
+<p><em>Note: AI Generated by ChatGPT-4o model, with human edits</em>
+<em>Special thanks to </em><em>Yttria Aniseia</em><em> for inclusion</em></p>
 
 
 

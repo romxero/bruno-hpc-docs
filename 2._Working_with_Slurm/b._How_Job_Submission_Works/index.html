@@ -1217,7 +1217,7 @@
 <p>Before diving into a job submission, let's stop for a moment to consider what
 happens when a job is submitted to Slurm. A simplified diagram of the basic
 process is:</p>
-<details open=""><summary>Request error [url:http://localhost:51080/actdiag/png]: HTTPConnectionPool(host='localhost', port=51080): Max retries exceeded with url: /actdiag/png (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x10216bf50>, 'Connection to localhost timed out. (connect timeout=10)'))</summary><p></p><pre><code linenums="1">actdiag {
+<details open=""><summary>Request error [url:http://localhost:51080/actdiag/png]: HTTPConnectionPool(host='localhost', port=51080): Max retries exceeded with url: /actdiag/png (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106357f50>, 'Connection to localhost timed out. (connect timeout=10)'))</summary><p></p><pre><code linenums="1">actdiag {
   submit -> parseargs -> accept -> schedule -> assign -> run -> writeoutput -> exit -> writejobrecord -> reviewoutput
 
   lane user {

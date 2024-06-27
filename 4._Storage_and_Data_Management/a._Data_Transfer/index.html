@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="CZBioHub HPC User Guide">
+        <meta name="description" content="Data transfer procedures, and tools for the Bruno HPC System">
       
       
         <meta name="author" content="@griznog,@rc">
       
       
-        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/2._Working_with_Slurm/e._Using_Batch_Array_Jobs/">
+        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/a._Data_Transfer/">
       
       
-        <link rel="prev" href="../d._Using_Simple_Batch_Jobs/">
+        <link rel="prev" href="../../3._Software_Stack_Management/f._Self-Managed_Software_and_Applications/">
       
       
-        <link rel="next" href="../f._Using_Job_Dependencies/">
+        <link rel="next" href="../b._Storage_Namespaces/">
       
       
       <link rel="icon" href="../../images/favicon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Submitting Arrays - CZBioHub HPC User Quide</title>
+        <title>Data Transfer - CZBioHub HPC User Quide</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#submitting-arrays" class="md-skip">
+        <a href="#data-transfer" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Submitting Arrays
+              Data Transfer
             
           </span>
         </div>
@@ -311,19 +311,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -337,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             2. Working with Slurm
@@ -351,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../a._Introduction_to_Slurm_and_Resource_Scheduling/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/a._Introduction_to_Slurm_and_Resource_Scheduling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../b._How_Job_Submission_Works/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/b._How_Job_Submission_Works/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../c._Using_Interactive_Jobs/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/c._Using_Interactive_Jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../d._Using_Simple_Batch_Jobs/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/d._Using_Simple_Batch_Jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,19 +430,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../2._Working_with_Slurm/e._Using_Batch_Array_Jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +442,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -466,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../f._Using_Job_Dependencies/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/f._Using_Job_Dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../g._Advanced_Job_Scripting/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/g._Advanced_Job_Scripting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h._Managing_Slurm_Jobs/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/h._Managing_Slurm_Jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../i._Using_the_Slurm_Rest_API/" class="md-nav__link">
+      <a href="../../2._Working_with_Slurm/i._Using_the_Slurm_Rest_API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,17 +710,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -746,7 +736,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             4. Storage and Data Management
@@ -757,10 +747,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../4._Storage_and_Data_Management/a._Data_Transfer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Transfer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -769,6 +779,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transfer protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-based-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Based Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Based Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SFTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rsync
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -781,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4._Storage_and_Data_Management/b._Storage_Namespaces/" class="md-nav__link">
+      <a href="../b._Storage_Namespaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,6 +1257,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transfer protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transfer protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-based-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Based Protocols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Based Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SFTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rsync
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1192,185 +1326,139 @@
                   
 
 
-<h1 id="submitting-arrays">Submitting Arrays</h1>
-<p>Array jobs are much like single job submissions with a few exceptions:</p>
+<h1 id="data-transfer">Data Transfer</h1>
+<p>Transferring data to a High-Performance Computing (HPC) system involves several steps to ensure that your data is securely and efficiently moved to the computing environment where you can perform complex computations. </p>
+<h2 id="transfer-protocols">Transfer protocols</h2>
+<p>A number of different methods allows for transferring data in and out of the HPC resources at the Biohub Network. 
+Terminal SSH-based commands such as <code>sftp</code>, or <code>rsync</code>, are highly recommended. 
+GUI SSH-based 
+These will provide the best performance for data transfers to and from the Biohub campuses.</p>
+<div class="admonition warning">
+<p class="admonition-title">A note about the <code>scp</code> tool</p>
+<p>The <code>scp</code> command has been deemed insecure. Its use is now deprecated. <code>rsync</code> or <code>sftp</code> should be used instead.
+<a href="https://lwn.net/Articles/835962/">More information on its deprecation</a>.</p>
+</div>
+<h3 id="ssh-based-protocols">SSH Based Protocols</h3>
+<h4 id="sftp">SFTP</h4>
+<p>SFTP clients are interactive file transfer programs, similar to FTP, which perform all operations over an encrypted transport.</p>
+<p>A variety of graphical SFTP clients are available for different OSes:</p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://winscp.net/eng/index.php">WinSCP</a></td>
+<td>Windows</td>
+</tr>
+<tr>
+<td><a href="https://filezilla-project.org/">Filezilla</a></td>
+<td>Cross-Platform</td>
+</tr>
+<tr>
+<td><a href="https://fetchsoftworks.com/">Fetch2</a></td>
+<td>Mac</td>
+</tr>
+<tr>
+<td><a href="https://cyberduck.io">CyberDuck</a></td>
+<td>Mac</td>
+</tr>
+<tr>
+<td><a href="https://www.mucommander.com/">muCommander</a></td>
+<td>Cross-Platform</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rsync">Rsync</h4>
+<p>Using rsync:</p>
+<p>sh</p>
+<pre><code>rsync -avz /path/to/local/file username@hpc-system-address:/path/to/remote/directory
+
+    For directories, you can use the same command format.
+</code></pre>
+<p>When setting up your connection to Sherlock in the above programs, use the following information:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hostname</td>
+<td>login.bruno.czbiohub.org</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>firstname.lastname</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>your okta password</td>
+</tr>
+</tbody>
+</table>
 <ol>
-<li>Array jobs have the additional <code>#SBATCH --array=N-M[:S][%T]</code> argument
-   specifying:<ul>
-<li><code>N</code> = start</li>
-<li><code>M</code> = end</li>
-<li><code>S</code> = step size for the array ID range</li>
-<li><code>T</code> = Task throttle limit</li>
-</ul>
+<li>
+<p>Understanding File Transfer Protocols</p>
+<p>SCP (Secure Copy Protocol): A secure way to transfer files between local and remote systems. It uses SSH (Secure Shell) for data transfer and authentication.
+SFTP (Secure File Transfer Protocol): An extension of SSH, it allows for secure file transfer and access to the file system.
+rsync: A fast and versatile command-line tool for copying files and directories locally and remotely. It can synchronize files between two locations while minimizing data transfer by only sending differences.</p>
 </li>
-<li>The submitted script will be executed once for each array ID, setting these
-   variables to appropriate values each time:<ul>
-<li><code>SLURM_ARRAY_JOB_ID</code> = The JOBID of this task.</li>
-<li><code>SLURM_ARRAY_TASK_ID</code> = The task ID of this task.</li>
-</ul>
+<li>
+<p>Preparing Your Data</p>
+<p>Organize Your Files: Before transferring, organize your files and directories in a structured manner. This makes it easier to locate and manage data on the HPC system.
+Compress Large Files: Compress large files or directories to reduce transfer time. Tools like tar, gzip, or zip can be used for compression.</p>
+</li>
+<li>
+<p>Connecting to the HPC System</p>
+<p>Obtain Access Credentials: Ensure you have the necessary credentials (username, password, or SSH keys) provided by your HPC administrator.
+Establish an SSH Connection: Use an SSH client (e.g., ssh command in Unix/Linux, PuTTY for Windows) to connect to the HPC system. Example command:</p>
+<p>sh</p>
+<p>ssh username@hpc-system-address</p>
+</li>
+<li>
+<p>Transferring Files</p>
 </li>
 </ol>
-<p>A simple array example script is:</p>
-<pre><code>#!/bin/bash
+<p>Using SFTP:</p>
+<p>sh</p>
+<p>sftp username@hpc-system-address</p>
+<pre><code>Once connected, use put to upload files:
 
-#SBATCH --job-name=ArrayJobScript
-#SBATCH --time=10:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --array=0-4
+sh
 
-
-# Print some job information
-echo
-echo &quot;My hostname is: $(hostname -s)&quot;
-echo &quot;I am job $SLURM_JOB_ID&quot;
-echo &quot;I am a member of the job array $SLURM_ARRAY_JOB_ID&quot;
-echo &quot;My task ID is $SLURM_ARRAY_TASK_ID&quot;
-echo
-
-# Sleep for 1 minute
-sleep 60s
+put /path/to/local/file /path/to/remote/directory
 </code></pre>
-<h1 id="slurm_array_task_id-as-a-parameter"><code>SLURM_ARRAY_TASK_ID</code> as a parameter</h1>
-<p>Within an array job script, the <code>${SLURM_ARRAY_TASK_ID}</code> value can be used to
-change the scripts behavior for each element job in the array. For example,
-suppose you have an application with takes a parameter as an argument that is
-an integer value and you wish to test different values over a range from 1 to 10. 
-A script for this might look like:</p>
-<pre><code>#!/bin/bash
-
-#SBATCH --job-name=ParameterTesting
-#SBATCH --time=10:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --array=1-10
-
-# This is only using sleep, the sleep function could be replaced with a
-# computational model taking one parameter.
-sleep $SLURM_ARRAY_TASK_ID
-</code></pre>
-<h1 id="reading-multiple-arbitrary-parameters">Reading Multiple Arbitrary Parameters</h1>
-<p>An arbitrary number of key-value pairs can be associated with each
-<code>SLURM_ARRAY_TASK_ID</code> by having the job script read a file which is indexed on
-<code>SLURM_ARRAY_TASK_ID</code> and has the values in some known arrangement that can be
-extracted. An example of this approach is these two files, first the indexed
-file of values with values delimited by colons:</p>
-<pre><code>0:10:28:1.657:80.0023
-1:12:14:0.324:32.9
-2:1:7:9.41:16.8
-</code></pre>
-<p>Next, the array script which processes them:</p>
-<pre><code>#!/bin/bash
-
-#SBATCH --job-name=ArrayIndexFileExample
-#SBATCH --time=10:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --array=0-2
-
-# Print some job information
-echo
-echo &quot;My execution hostname is: $(hostname -s).&quot;
-echo &quot;I am job $SLURM_JOB_ID, a member of the job array $SLURM_ARRAY_JOB_ID&quot;
-echo &quot;and my task ID is $SLURM_ARRAY_TASK_ID&quot;
-echo
-
-# We expect this file to be in the working directory, otherwise use full path.
-# Values are grabbed by selecting the line that begins with the
-# SLURM_ARRAY_TASK_ID
-values=$(grep &quot;^${SLURM_ARRAY_TASK_ID}:&quot; array_index.txt)
-
-# Cut each individual value from it's corresponding position in the line we
-# pulled out above.
-param1=$(echo $values | cut -f 2 -d:)
-param2=$(echo $values | cut -f 3 -d:)
-param3=$(echo $values | cut -f 4 -d:)
-
-# Echo this out for illustration, but in practice we would just run the
-# command (remove the &quot;echo&quot; statement and the double quotes).
-echo &quot;command -arg1=$param1 -arg2=$param2 -arg3=$param3&quot;
-</code></pre>
-<p>When the script runs SLURM will assign each task a SLURM_ARRAY_TASK_ID and the
-script will use that to pull out the values for each job array element. As this
-script demonstrates, the task id can be used to access any number of arbitrary
-command, arguments, scripts, files, etc, making job arrays a very powerful
-feature for parallelizing tasks requiring no intercommunication between each
-task.</p>
-<h1 id="slurm_array_task_id-to-process-a-list"><code>${SLURM_ARRAY_TASK_ID}</code> to Process a List</h1>
-<p>Given a list of items, one per line in a file, it's easy to use an array to
-process each item. Note that it's also possible to adjust which lines get
-processed with the array specification. For instance, If you only wanted to
-process lines 100 - 120, simply use {{{--array=100-120}}}. The list could be as
-simple as a list of files prepared by ls -1 &gt; mylistfofiles.txt or as
-complicated as a list of full command lines to execute in individual jobs.</p>
-<p>An example list:</p>
-<pre><code class="language-text">This is line 1.
-And now we have line 2.
-After 1 and 2 comes line 3.
-2 + 2 is 4.
-5 is a prime number.
-A hexagon has 6 sides.
-&quot;Prime 7 is.&quot; (Yoda during a short stint as a math teacher.)
-There are only 10 kinds of people, those who understand octal and ... nevermind.
-</code></pre>
-<p>Next, the array script which processes the list items:</p>
-<pre><code>#!/bin/bash
-
-#SBATCH --job-name=ArrayLinesFromFileExample
-#SBATCH --time=10:00
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --array=1-8
-
-# Print some job information
-echo
-echo &quot;My execution hostname is: $(hostname -s).&quot;
-echo &quot;I am job $SLURM_JOB_ID, a member of the job array $SLURM_ARRAY_JOB_ID&quot;
-echo &quot;and my task ID is $SLURM_ARRAY_TASK_ID&quot;
-echo
-
-# We expect this file to be in the working directory. Use full path if it's not.
-value=$(sed -n &quot;${SLURM_ARRAY_TASK_ID}p&quot; array_lines.txt)
-
-echo &quot;command ${value}&quot;
-</code></pre>
-<h2 id="array-indexing-examples">Array indexing examples</h2>
-<dl>
-<dt><code>--array=0-100:4</code></dt>
-<dd>
-<p>Changes step to 4 from default of 1, results in array task IDs of 0,4,8,12,16,...100</p>
-</dd>
-<dt><code>--array=2,34,5,89,1,23</code></dt>
-<dd>
-<p>Runs specific tasks from the list of array indices</p>
-</dd>
-</dl>
-<h2 id="job-array-throttling">Job Array Throttling</h2>
-<p>It is often very useful to be able to limit the number of subtasks of a given
-job array that can run concurrently.  This is known as <strong>job array throttling</strong>
-and may be accomplished with the <code>%</code> modifier, as shown in the following
-example:</p>
-<dl>
-<dt><code>--array=0-50%5</code></dt>
-<dd>
-<p>Results in 51 tasks numbered 0-50 but limits them to no more than 5 running tasks at any one time.</p>
-</dd>
-</dl>
-<p>This may be done on the fly even after the job array has been submitted and
-some task elements are running.  Reducing the number of concurrent tasks will
-NOT kill jobs, it will allow any running subtasks to complete, and will not
-allow further jobs to start until the throttled limit has been reached.  To
-apply/change a throttle on a job array that is has been submitted, one may use
-<code>scontrol</code> as follows, modify MYJOBID with the job array's base jobid (the
-numbers before the underscore in the <code>squeue</code> output):</p>
-<pre><code class="language-bash">scontrol update jobid=MYJOBID arraytaskthrottle=MYLIMIT
-</code></pre>
+<ol>
+<li>
+<p>Verifying Transfer</p>
+<p>Check File Integrity: After transfer, log in to the HPC system and verify that the files have been transferred correctly by checking file sizes and contents.</p>
+</li>
+<li>
+<p>Automating Transfers</p>
+<p>Batch Scripts: Create scripts to automate repetitive transfer tasks using shell scripting. This can be particularly useful for regular data uploads.
+Cron Jobs: Schedule regular file transfers using cron jobs (Unix/Linux) to automate the process.</p>
+</li>
+</ol>
+<p>By following these steps, you can efficiently and securely transfer your data to an HPC system, allowing you to leverage powerful computing resources for your computational tasks.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/a._Data_Transfer/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/b._Storage_Namespaces/</loc>
          <lastmod>2024-06-27</lastmod>
          <changefreq>daily</changefreq>

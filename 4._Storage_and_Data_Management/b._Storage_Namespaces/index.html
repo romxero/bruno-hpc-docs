@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/b._Storage_Namespaces/">
       
       
-        <link rel="prev" href="../../3._Software_Stack_Management/f._Self-Managed_Software_and_Applications/">
+        <link rel="prev" href="../a._Data_Transfer/">
       
       
         <link rel="next" href="../../5._Site_and_Cluster_Infrastructure/a._Overview_of_HPC_Sites_and_Reseources/">
@@ -747,6 +747,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../a._Data_Transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Transfer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1179,48 +1200,111 @@ Comments/suggestions/critiques to us in Slack #hpc-community.</p>
 </div>
 <h1 id="storage-namespaces">Storage Namespaces</h1>
 <p>The following table outlines the available storage namespaces in which storage is either already available or can be provisioned upon request.</p>
-<p>+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| Unix Path                  | Disk/Server<br> | Snapshots | On-Site<br> | Off-Site<br>  | AWS Glacier<br> | Best used for/data which is: |
-|                            | Redundancy      |           | Replica     | Replica       | Deep Archive    |                              |
-+============================+=================+===========+=============+===============+=================+==============================+
-| <code>${HOME}</code>                  | High            | Yes       | Yes         | No            | No              |  - private data/applications |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/mydata/${USER}</code>      | High            | Yes       | Yes         | No            | No              |  - personal working space    |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/local/scratch</code><br>       | Low             | No        | No          | No            | No              |  - scratch data              |
-| <code>/hpc/nodes/${NODE}</code>       |                 |           |             |               |                 |  - easily reproducible data  |
-|                            |                 |           |             |               |                 |  - intermediate job files    |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/scratch/${NAME}</code>     | Low/Medium      | No        | No          | No            | No              |  - scratch data              |
-|                            |                 |           |             |               |                 |  - easily reproducible data  |
-|                            |                 |           |             |               |                 |  - intermediate job files    |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/projects/${NAME}</code>    | High            | Yes <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - working/active data sets  |
-|                            |                 |           |             |               |                 |  - results                   |
-|                            |                 |           |             |               |                 |  - difficult to reproduce    |
-|                            |                 |           |             |               |                 |    data                      |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/archives/${NAME}</code>    | High            | Yes <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - completed projects        |
-|                            |                 |           |             |               |                 |  - data with retention       |
-|                            |                 |           |             |               |                 |    requirements              |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/user_apps/${GROUP}</code>  | High            | Yes <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Yes <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>      | No              |  - shared application        |
-|                            |                 |           |             |               |                 |    installations             |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/reference/${NAME}</code>   | High            | Yes <sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Optional    | Optional      | No              |  - easy to re-download       |
-|                            |                 |           |             |               |                 |  - easy to reproduce         |
-|                            |                 |           |             |               |                 |  - write-once, read-many     |
-|                            |                 |           |             |               |                 |  - storage optimized for     |
-|                            |                 |           |             |               |                 |    reads                     |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/instruments/${NAME}</code> | High            | Yes <sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup>  | Yes         | Optional <sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup> | Optional <sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   |  - raw or preprocessed       |
-|                            |                 |           |             |               |                 |    instrument data           |
-|                            |                 |           |             |               |                 |  - directory per-instrument  |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+
-| <code>/hpc/websites/${VHOST}</code>   | Variable        | Optional  | Optional    | Optional      | Optional        |  - static web content        |
-|                            |                 |           |             |               |                 |  - requires a vhost          |
-|                            |                 |           |             |               |                 |    name for website          |
-+----------------------------+-----------------+-----------+-------------+---------------+-----------------+------------------------------+</p>
+<table>
+<thead>
+<tr>
+<th>Unix Path</th>
+<th>Disk/Server<br>Redundancy</th>
+<th>Snapshots</th>
+<th>On-Site<br>Replica</th>
+<th>Off-Site<br>Replica</th>
+<th>AWS Glacier<br>Deep Archive</th>
+<th>Best used for/data which is:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>${HOME}</code></td>
+<td>High</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>- private data/applications</td>
+</tr>
+<tr>
+<td><code>/hpc/mydata/${USER}</code></td>
+<td>High</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>- personal working space</td>
+</tr>
+<tr>
+<td><code>/local/scratch</code><br><code>/hpc/nodes/${NODE}</code></td>
+<td>Low</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>- scratch data<br>- easily reproducible data<br>- intermediate job files</td>
+</tr>
+<tr>
+<td><code>/hpc/scratch/${NAME}</code></td>
+<td>Low/Medium</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>- scratch data<br>- easily reproducible data<br>- intermediate job files</td>
+</tr>
+<tr>
+<td><code>/hpc/projects/${NAME}</code></td>
+<td>High</td>
+<td>Yes <sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Yes</td>
+<td>Optional <sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Optional <sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td>- working/active data sets<br>- results<br>- difficult to reproduce data</td>
+</tr>
+<tr>
+<td><code>/hpc/archives/${NAME}</code></td>
+<td>High</td>
+<td>Yes <sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Yes</td>
+<td>Optional <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Optional <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td>- completed projects<br>- data with retention requirements</td>
+</tr>
+<tr>
+<td><code>/hpc/user_apps/${GROUP}</code></td>
+<td>High</td>
+<td>Yes <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Yes</td>
+<td>Yes <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
+<td>No</td>
+<td>- shared application installations</td>
+</tr>
+<tr>
+<td><code>/hpc/reference/${NAME}</code></td>
+<td>High</td>
+<td>Yes <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Optional</td>
+<td>Optional</td>
+<td>No</td>
+<td>- easy to re-download<br>- easy to reproduce<br>- write-once, read-many<br>- storage optimized for reads</td>
+</tr>
+<tr>
+<td><code>/hpc/instruments/${NAME}</code></td>
+<td>High</td>
+<td>Yes <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td>Yes</td>
+<td>Optional <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Optional <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td>- raw or preprocessed instrument data<br>- directory per-instrument</td>
+</tr>
+<tr>
+<td><code>/hpc/websites/${VHOST}</code></td>
+<td>Variable</td>
+<td>Optional</td>
+<td>Optional</td>
+<td>Optional</td>
+<td>Optional</td>
+<td>- static web content<br>- requires a vhost name for website</td>
+</tr>
+</tbody>
+</table>
 <h1 id="namespace-details">Namespace Details</h1>
 <h2 id="home"><code>${HOME}</code></h2>
 <p>The user <code>${HOME}</code> directory, also known as <code>~</code> and on Scientific Computing

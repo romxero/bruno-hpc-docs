@@ -1224,7 +1224,6 @@
 <th align="right">TmpFS</th>
 <th align="right">GPUs</th>
 <th align="center">GPU Type</th>
-<th align="center">Date</th>
 </tr>
 </thead>
 <tbody>
@@ -1235,7 +1234,6 @@
 <td align="right">4 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center">2021</td>
 </tr>
 <tr>
 <td><code>login-fry1</code></td>
@@ -1244,7 +1242,6 @@
 <td align="right">15 TB</td>
 <td align="right">4 x TitanXP</td>
 <td align="center">PCIe</td>
-<td align="center">?</td>
 </tr>
 <tr>
 <td><code>login-fry2</code></td>
@@ -1253,7 +1250,6 @@
 <td align="right">15 TB</td>
 <td align="right">4 x TitanXP</td>
 <td align="center">PCIe</td>
-<td align="center">?</td>
 </tr>
 <tr>
 <td><code>login-falcon</code></td>
@@ -1262,7 +1258,6 @@
 <td align="right">85 TB</td>
 <td align="right">3 x TitanRTX</td>
 <td align="center">PCIe</td>
-<td align="center">?</td>
 </tr>
 <tr>
 <td><code>cpu-a-[1-2]</code></td>
@@ -1271,7 +1266,6 @@
 <td align="right">4 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center">2021</td>
 </tr>
 <tr>
 <td><code>cpu-b-[1-6]</code></td>
@@ -1280,7 +1274,6 @@
 <td align="right">4 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center">2021</td>
 </tr>
 <tr>
 <td><code>cpu-c-[1-4]</code></td>
@@ -1289,7 +1282,6 @@
 <td align="right">4 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center">?</td>
 </tr>
 <tr>
 <td><code>cpu-d-1</code></td>
@@ -1298,7 +1290,6 @@
 <td align="right">6.5 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center">?</td>
 </tr>
 <tr>
 <td><code>cpu-e-[1-2]</code></td>
@@ -1307,7 +1298,6 @@
 <td align="right">4 TB</td>
 <td align="right">none</td>
 <td align="center">N/A</td>
-<td align="center"><font color=red> 2023Q4 </font></td>
 </tr>
 <tr>
 <td><code>gpu-a-[1-4]</code></td>
@@ -1316,7 +1306,6 @@
 <td align="right">14 TB</td>
 <td align="right">4 x A100(40GB)/node</td>
 <td align="center">SXM4</td>
-<td align="center">2021</td>
 </tr>
 <tr>
 <td><code>gpu-b-[1-6]</code></td>
@@ -1325,7 +1314,6 @@
 <td align="right">14 TB</td>
 <td align="right">4 x A6000/node</td>
 <td align="center">PCIe</td>
-<td align="center">2022</td>
 </tr>
 <tr>
 <td><code>gpu-c-[1-4]</code></td>
@@ -1334,7 +1322,6 @@
 <td align="right">7 TB</td>
 <td align="right">2 x A40 / node</td>
 <td align="center">PCIe SLI</td>
-<td align="center">2023</td>
 </tr>
 <tr>
 <td><code>gpu-d-[1-2]</code></td>
@@ -1343,7 +1330,6 @@
 <td align="right">45 TB</td>
 <td align="right">4 x A100(80GB)/node</td>
 <td align="center">SXM4</td>
-<td align="center">2023</td>
 </tr>
 <tr>
 <td><code>gpu-e-[1-4]</code></td>
@@ -1352,7 +1338,6 @@
 <td align="right">7 TB</td>
 <td align="right">1 x A40 / node</td>
 <td align="center">PCIe</td>
-<td align="center"><font color=red> 2023Q4 </font></td>
 </tr>
 <tr>
 <td><code>gpu-sm01-[01-20]</code></td>
@@ -1361,7 +1346,6 @@
 <td align="right">1.8 TB</td>
 <td align="right">1 x A40 / node</td>
 <td align="center">PCIe</td>
-<td align="center">2022</td>
 </tr>
 <tr>
 <td><code>gpu-sm02-[01-20]</code></td>
@@ -1370,7 +1354,14 @@
 <td align="right">1.8 TB</td>
 <td align="right">1 x A40 / node</td>
 <td align="center">PCIe</td>
-<td align="center">2022</td>
+</tr>
+<tr>
+<td><code>gpu-f-[1-6]</code></td>
+<td align="right">112/node</td>
+<td align="right">2 TB/node</td>
+<td align="right">2 TB</td>
+<td align="right">8 x H100 / node</td>
+<td align="center">SXM4</td>
 </tr>
 <tr>
 <td>[ Computational Resources ]</td>
@@ -1379,10 +1370,10 @@
 <td align="right"></td>
 <td align="right"></td>
 <td align="center"></td>
-<td align="center"></td>
 </tr>
 </tbody>
 </table>
+<p><em>Note: Change</em></p>
 <ul>
 <li>Total User Partitions CPU cores: <ul>
 <li>Today: 2336</li>
@@ -1398,49 +1389,36 @@
 <hr>
 
 <h1 id="gpu-summary">GPU Summary</h1>
-<p>Note: Future GPUs show delivery ETA in <font color=red> red </font>.</p>
 <table>
 <thead>
 <tr>
 <th align="center">GPU Type</th>
 <th align="center">Bruno Total</th>
-<th align="center">(to be delivered)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">A100 (40 GB)</td>
 <td align="center">16</td>
-<td align="center"></td>
 </tr>
 <tr>
 <td align="center">A100 (80 GB)</td>
 <td align="center">8</td>
-<td align="center"></td>
 </tr>
 <tr>
 <td align="center">A6000 (48 GB)</td>
 <td align="center">24</td>
-<td align="center"></td>
 </tr>
 <tr>
 <td align="center">A40 (48GB)</td>
 <td align="center">48</td>
-<td align="center">4 (<font color=red> 2023Q4 </font>)</td>
 </tr>
 <tr>
-<td align="center">TitanXP</td>
-<td align="center">8</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">TitanRTX</td>
-<td align="center">3</td>
-<td align="center"></td>
+<td align="center">H100 (80 GB)</td>
+<td align="center">48</td>
 </tr>
 <tr>
 <td align="center">[ GPU Totals by type ]</td>
-<td align="center"></td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -1453,7 +1431,6 @@
 <th>Name</th>
 <th>FileSystem</th>
 <th>Size</th>
-<th>Date</th>
 </tr>
 </thead>
 <tbody>
@@ -1461,53 +1438,39 @@
 <td><code>storage-a-0[1-2]</code></td>
 <td>ZFS/NFS</td>
 <td>900 TB/node</td>
-<td>2019?</td>
 </tr>
 <tr>
 <td><code>storage-b-0[1-2]</code></td>
 <td>ZFS/NAS</td>
 <td>38 TB/node</td>
-<td>2022</td>
 </tr>
 <tr>
 <td><code>storage-odb2-[1-2]</code></td>
 <td>ZFS/NAS</td>
 <td>4.7 PB</td>
-<td>2022</td>
 </tr>
 <tr>
 <td><code>storage-odb5-[1-2]</code></td>
 <td>ZFS/NAS</td>
 <td>4.7 PB</td>
-<td>2022</td>
 </tr>
 <tr>
 <td><code>storage-c-1</code></td>
 <td>ZFS/NAS</td>
 <td>~ 4 PB</td>
-<td><font color=red> 2023Q4 </font></td>
 </tr>
 <tr>
 <td>DDN Appliance EXA1</td>
 <td>Lustre</td>
 <td>5.9 PB</td>
-<td>2023</td>
 </tr>
 <tr>
-<td>IBM ESS Appliance</td>
-<td>GPFS</td>
-<td>4.1 PB</td>
-<td>2018</td>
-</tr>
-<tr>
-<td>VAST TBD</td>
+<td>VAST</td>
 <td>VAST/[p]NFS</td>
 <td>1 PB</td>
-<td><font color=red> 2023Q4 </font></td>
 </tr>
 <tr>
 <td>[ Storage servers and appliances ]</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -1515,12 +1478,11 @@
 <td># Network View</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="bruno-cluster-network">Bruno Cluster Network</h2>
-<details open=""><summary>Request error [url:http://localhost:51080/nwdiag/png]: HTTPConnectionPool(host='localhost', port=51080): Max retries exceeded with url: /nwdiag/png (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x1065ad040>, 'Connection to localhost timed out. (connect timeout=10)'))</summary><p></p><pre><code linenums="1">nwdiag {
+<details open=""><summary>Request error [url:http://localhost:51080/nwdiag/png]: HTTPConnectionPool(host='localhost', port=51080): Max retries exceeded with url: /nwdiag/png (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x102dc9040>, 'Connection to localhost timed out. (connect timeout=10)'))</summary><p></p><pre><code linenums="1">nwdiag {
   node_width = 96;
   internet [label = "Internet", shape = cloud];
   firewall [label = "Firewall", shape = roundedbox, width = 72];

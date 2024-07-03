@@ -12,13 +12,13 @@
         <meta name="author" content="@griznog,@rc">
       
       
-        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/b._Storage_Namespaces/">
+        <link rel="canonical" href="https://hpc.czbiohub.org/hpc-user-guide/4._Storage_and_Data_Management/a._Storage_Namespaces/">
       
       
-        <link rel="prev" href="../a._Data_Transfer/">
+        <link rel="prev" href="../../3._Software_Stack_Management/f._Self-Managed_Software_and_Applications/">
       
       
-        <link rel="next" href="../../5._Site_and_Cluster_Infrastructure/a._Overview_of_HPC_Sites_and_Reseources/">
+        <link rel="next" href="../b._Data_Transfer/">
       
       
       <link rel="icon" href="../../images/favicon.svg">
@@ -747,27 +747,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../a._Data_Transfer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data Transfer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -790,6 +769,48 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b._Data_Transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Transfer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c._Example_Use_Cases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example Use Cases
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1214,6 +1235,9 @@
 
 
 <h1 id="introduction">Introduction</h1>
+<p>HPC storage systems are designed to cater to different data needs, from temporary scratch space to long-term archival storage. 
+They offer a combination of high capacity, redundancy, and accessibility to support the demanding requirements of large-scale computational tasks and data management. 
+Understanding the types and uses of different storage paths helps users optimize their workflow and ensure data integrity on our HPC systems.</p>
 <div class="admonition warning">
 <p class="admonition-title">Draft Draft Draft</p>
 <p>This is a draft of the storage description, layout and recommended usage.
@@ -1410,33 +1434,6 @@ data written to <code>/hpc/websites/myproject.czbiohub.org</code> will be availa
 <a href="https://myproject.czbiohub.org">https://myproject.czbiohub.org</a>. Additional
 features, like authentication and access control can be made available upon
 request.</p>
-<h1 id="example-use-cases">Example Use Cases</h1>
-<h2 id="analysis-pipeline">Analysis Pipeline</h2>
-<p>Suppose we have a pipeline, managed by a workflow tool like <code>nextflow</code>. The
-incoming raw data for this pipeline is generated from one or more lab
-instruments. The pipeline processing will produce</p>
-<ul>
-<li>intermediate/scratch files</li>
-<li>quality control results to be web-accessible</li>
-<li>processed data made available for researcher secondary analysis via local filesystem and globus</li>
-</ul>
-<p>The steps in our hypothetical data flow might be:</p>
-<ol>
-<li>Data moves from instrument(s) to <code>/hpc/instruments/${INSTRUMENT_NAME}(s)</code>. Can be push or pull.</li>
-<li>Pipeline copies data to <code>/hpc/scratch/${NAME}</code> as a working location.</li>
-<li>HPC Cluster jobs perform analysis:<ul>
-<li>Reference data read from <code>/hpc/reference/${DBNAME}</code></li>
-<li>Running jobs use <code>/tmp</code> and/or <code>/local/scratch</code> and/or <code>/hpc/scratch/${NAME}</code> for intermediate and temporary files.</li>
-<li>Results written to <code>/hpc/projects/${NAME}</code></li>
-</ul>
-</li>
-<li>QC output formatted and written to <code>/hpc/websites/${NAME}.czbiohub.org</code></li>
-<li>Data to be retained long-term copied to <code>/hpc/archives/%{NAME}</code></li>
-</ol>
-<p>This example uses shared and local scratch, instrument storage, projects
-storage, website storage and archive storage. As all these are also available
-(or can be) via <a href="https://globus.org">Globus</a>, any of these spaces can be
-optionally used for data delivery to or sharing with collaborators.</p>
 <div class="footnote">
 <hr />
 <ol>
